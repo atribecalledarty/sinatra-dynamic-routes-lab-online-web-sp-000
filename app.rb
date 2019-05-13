@@ -1,11 +1,11 @@
 require_relative 'config/environment'
 
-module Rack
-  class Lint
-    def assert message, &block
-    end
-  end
-end
+#module Rack
+#  class Lint
+#    def assert message, &block
+#    end
+#  end
+#end
 
 class App < Sinatra::Base
   # Write your code here!
@@ -27,7 +27,7 @@ class App < Sinatra::Base
   
   
   get '/say/:number/:phrase' do
-    
+    "#{params[:number]}"
     "#{params[:phrase]}" 
     
   end
