@@ -28,7 +28,7 @@ class App < Sinatra::Base
   
   get '/say/:number/:phrase' do
     @complete_sentence = ""
-    params[:number].times do
+    params[:number].to_i.times do
       @complete_sentence += "#{params[:phrase]} "
     end
     "#{@complete_sentence}"
