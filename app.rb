@@ -14,6 +14,21 @@ class App < Sinatra::Base
   
   get '/say/:number/:phrase' do
     counter = 0
-    while (counter < params[:number].to_i)
+    while (counter < params[:number].to_i) do
+      "#{params[:phrase]}"
+      counter += 1
+    end
+  end
+  
+  get '/say/:word1/:word2/:word3/:word4/:word5' do
+    "Hi #{params[:word1]}. You are #{params[:word2]}, and I am #{params[:word3]}. Let's go #{params[:word4]} that #{params[:word5]}."
+  end
+  
+  get '/:operation/:number1/:number2' do
+    case params[:operation]
+    when "add"
+    when "subtract"
+    when "multiply"
+    when "divide"
   end
 end
