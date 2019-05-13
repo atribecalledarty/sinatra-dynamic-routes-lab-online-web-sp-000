@@ -27,9 +27,11 @@ class App < Sinatra::Base
   
   
   get '/say/:number/:phrase' do
-    "#{params[:number]}"
-    "#{params[:phrase]}" 
-    
+    @complete_sentence = ""
+    params[:number].times do
+      @complete_sentence += "#{params[:phrase]} "
+    end
+    "#{@complete_sentence}"
   end
   
   get '/:operation/:number1/:number2' do
