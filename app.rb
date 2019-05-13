@@ -14,6 +14,7 @@ class App < Sinatra::Base
   
   get '/say/:number/:phrase' do
     "what the heck"
+    counter = 0
   end
   
   get '/say/:word1/:word2/:word3/:word4/:word5' do
