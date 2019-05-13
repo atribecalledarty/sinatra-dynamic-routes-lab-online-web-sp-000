@@ -13,6 +13,7 @@ class App < Sinatra::Base
   end
   
   get '/say/:number/:phrase' do
+    "what the heck"
     @counter = 0
     "what the heck"
     while (@counter < params[:number].to_i) do
