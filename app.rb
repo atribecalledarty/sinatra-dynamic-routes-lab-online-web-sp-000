@@ -21,7 +21,7 @@ class App < Sinatra::Base
   end
   
   get '/say/:word1/:word2/:word3/:word4/:word5' do
-    "Hi #{params[:word1]}. You are #{params[:word2]}, and I am #{params[:word3]}. Let's go #{params[:word4]} that #{params[:word5]}."
+    "#{params[:word1]} #{params[:word2]} #{params[:word3]} #{params[:word4]} #{params[:word5]}."
   end
   
   get '/:operation/:number1/:number2' do
